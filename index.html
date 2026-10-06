@@ -1,78 +1,21 @@
-,<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Engineering-Portfolio</title>
-    <style>
-        /* Hintergrund- und Texteinstellungen */
-        body {
-            background-color: #000000; /* Sattes Orange */
-            color: #FF8C00 ;            /* Schwarze Schrift */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 0;
-            border-bottom: 2px solid #000;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        .projekt-karte {
-            background: rgba(255, 255, 255, 0.1); 
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #000;
-            margin-bottom: 20px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            border: 2px solid #000;
-            margin-top: 15px;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>APIARIOT </h1>
-        <p>LoRaWAN für IOT</p>
-    </header>
-
-    <main>
+<!-- Sección del Manual / Dokumentation (3 Sprachen) -->
         <section class="projekt-karte">
-            <h2>Aktuelles Projekt: LoRaWAN-Knoten (868MHz)</h2>
-            <p> Sensoren.</p>
-            
-            <img src="LogoContorno.png" alt="KiCad Schaltplan oder Leiterplatte">
+            <h2>Dokumentation: Erste Schritte im IoT mit LoRaWAN</h2>
+            <p>Lies die Anleitung direkt im Browser oder lade sie herunter.</p>
+
+            <div class="btn-group">
+                <button type="button" class="btn-visor" onclick="cambiarDocumento('IoT_LoRaWAN_DE.pdf')">Deutsch</button>
+                <button type="button" class="btn-visor" onclick="cambiarDocumento('IoT_LoRaWAN_ES.pdf')">Español</button>
+                <button type="button" class="btn-visor" onclick="cambiarDocumento('IoT_LoRaWAN_EN.pdf')">English</button>
+                <a id="btnDescarga" href="IoT_LoRaWAN_DE.pdf" download class="btn-download">PDF Herunterladen / Download</a>
+            </div>
+
+            <div class="pdf-wrapper">
+                <iframe id="pdfFrame" src="IoT_LoRaWAN_DE.pdf" width="100%" height="100%" style="border: none;">
+                    <p style="padding: 20px; color: #fff; text-align: center;">
+                        Dein Browser unterstützt keine PDF-Vorschau. 
+                        <a href="IoT_LoRaWAN_DE.pdf" target="_blank" style="color: #FF8C00;">Hier klicken, um die Datei zu öffnen.</a>
+                    </p>
+                </iframe>
+            </div>
         </section>
-
-        <section class="projekt-karte">
-            <h2>Bombus</h2>
-            <p>(PCB) <strong>Schaltung</strong> BOM.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 - Erstellt mit GitHub Pages</p>
-    </footer>
-
-</body>
-</html>
